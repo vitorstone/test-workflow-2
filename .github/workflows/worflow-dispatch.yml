@@ -1,0 +1,15 @@
+on:
+  repository_dispatch:
+    types: [push-staging]
+
+jobs: 
+
+  run-test-job:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: test
+
+        run: |-
+          echo "it worked!"
